@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAALo/h92eFD06cmsuNth6KBwAAAAACAAAAAAAQZgAAAAEAACAAAAA4CDMcpXxhnup55moUB5rHwSWsnRklnIb5bW+q20XqEAAAAAAOgAAAAAIAACAAAABFLFJssEmrXsM6xJwbOrMRuTLulQjKcnaPmDvXAkBKQyAAAAAEvg55NT+jCga2qEGzxwVnDEBfGYCHy0P8nPLI2ZMozUAAAADgmS/rb5wPAu6Qv19z+xyepfbZrJptuf/GYq3/FKRj0wWFZlEdvrFvgpAPQPvsP+gbk7oADGsjCel76b3YgyO4</EncryptedPassword>
+    <_PublishTargetUrl>ftp://107.180.46.193/httpdocs</_PublishTargetUrl>
+    <History>False|2021-07-24T07:14:45.4403767Z;False|2021-07-24T13:12:44.5273845+06:00;False|2021-07-24T13:05:06.2215968+06:00;False|2021-07-24T13:03:39.8875708+06:00;False|2021-07-24T13:00:16.6128972+06:00;False|2021-07-24T12:51:40.7588631+06:00;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="appsettings.Development.json">
+      <publishTime>06/28/2021 02:50:18</publishTime>
+    </File>
+    <File Include="DogeCoin.deps.json">
+      <publishTime>07/24/2021 13:06:08</publishTime>
+    </File>
+    <File Include="DogeCoin.dll">
+      <publishTime>07/24/2021 13:06:07</publishTime>
+    </File>
+    <File Include="DogeCoin.exe">
+      <publishTime>07/24/2021 13:06:07</publishTime>
+    </File>
+    <File Include="DogeCoin.pdb">
+      <publishTime>07/24/2021 13:06:07</publishTime>
+    </File>
+    <File Include="DogeCoin.Views.dll">
+      <publishTime>07/24/2021 13:06:08</publishTime>
+    </File>
+    <File Include="DogeCoin.Views.pdb">
+      <publishTime>07/24/2021 13:06:08</publishTime>
+    </File>
+    <File Include="Newtonsoft.Json.dll">
+      <publishTime>03/17/2021 20:03:36</publishTime>
+    </File>
+    <File Include="RestSharp.dll">
+      <publishTime>09/30/2020 21:10:06</publishTime>
+    </File>
+    <File Include="web.config">
+      <publishTime>07/24/2021 13:06:37</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

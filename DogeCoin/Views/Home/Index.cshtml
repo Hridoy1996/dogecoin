@@ -1,0 +1,87 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    @@media screen and (max-width: 600px) {
+   .form-control, input[type=text] {
+    width: 100%;
+    margin-top: 0;
+
+   }
+}
+
+</style>
+<body style="background-color:#18191A" ;>
+    <h1 style="text-align: center; color:#FFFFFF">doge-usd</h1>
+    <div class="cal" style="position: absolute;  bottom: 100px;  left: 50%; margin-left: -200px;">
+        <div class="form-group form-inline d-flex justify-content-center">
+            <div class="input-group mr-2 mb-1">
+         
+                    <input type="text" id="doge-inp-id" onkeypress="return isNumber(event)" class="form-control">
+
+                    <div class="input-group-append">
+                        <button type="button" class="btn btn-info btn-lighten-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Doge
+                        </button>
+                </div>
+                </div>
+
+                <div class="input-group mr-2 mb-1">
+                    <input type="text" id="usd-inp-id" class="form-control">
+                    <div class="input-group-append">
+                        <button type="button" class="btn btn-info btn-lighten-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            USD
+                        </button>
+                    </div>
+                </div>
+            </div>
+    </div>
+</body>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script data-ad-client="ca-pub-1478453735891962" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<script type="text/javascript">
+
+    function isNumber(evt) {
+        var charCode = (evt.which) ? evt.which : evt.keyCode;
+        if (charCode != 46 && charCode > 31
+            && (charCode < 48 || charCode > 57))
+            return false;
+
+        return true;
+    }
+
+    $(function () {
+
+        console.log("Welcome to the console");
+        $("#doge-inp-id").val(1);
+
+        $.ajax({
+            method: "get",
+            url: "/Home/dogeToUsd",
+            success: function (res) {
+                console.log(res);
+                $("#usd-inp-id").val(res);
+            }
+        });
+        $("#doge-inp-id").on("change keydown paste input", function (e) {
+            console.log($(this).val());
+            let doge = $(this).val();
+
+            $.ajax({
+                method: "get",
+                url: "/Home/dogeToUsd",
+                success: function (res) {
+                    console.log(res);
+                    console.log(doge);
+                    let convertedValue = parseFloat(res) * parseFloat(doge);
+                    console.log(convertedValue);
+                    //  $("#usd-inp-id").text(convertedValue);
+                    $("#usd-inp-id").val(convertedValue.toFixed(5));
+                }
+            });
+
+        });
+    });
+</script>
